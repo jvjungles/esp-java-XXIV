@@ -5,60 +5,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD Cidades</title>
+    <title>CRUD Teste</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark">
-        <span class="navbar-brand text-white">Usuario logado: ${Session.usuarioAtual}</span>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a 
-                    href="/logout" 
-                    class="nav-link btn btn-secondary"
-                    >Sair da aplicação</a>
-            </li>
-        </ul>           
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a 
-                    href="/ttt" 
-                    class="nav-link btn btn-secondary"
-                    >Pagina nao existe</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a 
-                    href="/pais" 
-                    class="nav-link btn btn-secondary"
-                    >Gerenciar Paises</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a 
-                    href="/estado" 
-                    class="nav-link btn btn-secondary"
-                    >Gerenciar Estados</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a 
-                    href="/cidade" 
-                    class="nav-link btn btn-secondary"
-                    >Gerenciar Cidades</a>
-            </li>
-        </ul>
-    </nav>
+        <nav class="navbar navbar-expand-sm bg-dark">
+            <span class="navbar-brand text-white">Usuario logado: ${Session.usuarioAtual}</span>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a 
+                        href="/logout" 
+                        class="nav-link btn btn-secondary"
+                        >Sair da aplicação</a>
+                </li>
+            </ul>           
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a 
+                        href="/ttt" 
+                        class="nav-link btn btn-secondary"
+                        >Pagina nao existe</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a 
+                        href="/pais" 
+                        class="nav-link btn btn-secondary"
+                        >Gerenciar Paises</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a 
+                        href="/estado" 
+                        class="nav-link btn btn-secondary"
+                        >Gerenciar Estados</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a 
+                        href="/cidade" 
+                        class="nav-link btn btn-secondary"
+                        >Gerenciar Cidades</a>
+                </li>
+            </ul>
+        </nav>
 
     <div class="container-fluid">    
         <div class="jumbotron mt-5">
-            <h1>GERENCIAMENTO DE CIDADES</h1>
-            <p>UM CRUD PARA CRIAR, ALTERAR, EXCLUIR E LISTAR CIDADES</p>
+            <h1>GERENCIAMENTO DE ESTADOS</h1>
+            <p>UM CRUD PARA CRIAR, ALTERAR, EXCLUIR E LISTAR ESTADOS</p>
         </div>
 
             <#if cidadeAtual??>

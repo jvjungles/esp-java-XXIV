@@ -47,6 +47,66 @@ public class CidadeController {
         return "/crud";
     }
 
+    @GetMapping("/cidade")
+    public String listarCidade(
+        Model memoria, 
+        Principal usuario, 
+        HttpSession sessao, 
+        HttpServletResponse response) {
+
+        response.addCookie(new Cookie("listar", LocalDateTime.now().toString()));
+
+        memoria.addAttribute("listaCidades", repository
+                                                    .findAll()
+                                                    .stream()
+                                                    .map(Cidade::clonar)
+                                                    .collect(Collectors.toList()));
+
+        sessao.setAttribute("usuarioAtual", usuario.getName());
+                                                    
+        return "/cidade/cidade";
+    }
+
+    @GetMapping("/estado")
+    public String listarEstado(
+        Model memoria, 
+        Principal usuario, 
+        HttpSession sessao, 
+        HttpServletResponse response) {
+
+        response.addCookie(new Cookie("listar", LocalDateTime.now().toString()));
+
+        memoria.addAttribute("listaCidades", repository
+                                                    .findAll()
+                                                    .stream()
+                                                    .map(Cidade::clonar)
+                                                    .collect(Collectors.toList()));
+
+        sessao.setAttribute("usuarioAtual", usuario.getName());
+                                                    
+        return "/estado/estado";
+    }
+
+    @GetMapping("/pais")
+    public String listarPais(
+        Model memoria, 
+        Principal usuario, 
+        HttpSession sessao, 
+        HttpServletResponse response) {
+
+        response.addCookie(new Cookie("listar", LocalDateTime.now().toString()));
+
+        memoria.addAttribute("listaCidades", repository
+                                                    .findAll()
+                                                    .stream()
+                                                    .map(Cidade::clonar)
+                                                    .collect(Collectors.toList()));
+
+        sessao.setAttribute("usuarioAtual", usuario.getName());
+                                                    
+        return "/pais/pais";
+    }
+
     @PostMapping("/criar")
     public String criar(
         @Valid Cidade cidade, 
